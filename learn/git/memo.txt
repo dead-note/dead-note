@@ -1,0 +1,2 @@
+如果在Windows使用命令行 (Git Bash), 含非ASCII字符的文件名会显示为 "\346\226\260\350\246..."。若设定如下，就可以让含非ASCII字符的文件名正确显示了。
+$ git config --global core.quotepath off
