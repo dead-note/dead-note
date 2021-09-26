@@ -55,4 +55,6 @@ $ git clone git@github.com:dead-note/dead-note.git test2
 $ git pull <repository> <refspec>...
 $ git pull origin master
 
+
 push冲突的状态解决
+push冲突的解决2
