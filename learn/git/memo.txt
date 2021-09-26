@@ -1,2 +1,45 @@
+pull下载最新，push上传，clone克隆。	url:git@github.com:dead-note/dead-note.git	503759312@qq.com x8571308
+
+测试github是否能成功访问
+ssh -T git@github.com
+
 如果在Windows使用命令行 (Git Bash), 含非ASCII字符的文件名会显示为 "\346\226\260\350\246..."。若设定如下，就可以让含非ASCII字符的文件名正确显示了。
 $ git config --global core.quotepath off
+
+1.设置用户名和邮箱(--global 为全局参数，表明本地所有Git仓库都会使用这个配置)
+git config --global user.name "yourname"
+git config --global user.email "your_email@youremail.com"
+
+2.生成密钥(SSH key)
+ssh-keygen -t rsa -C "your_email@youremail.com"
+
+
+首先在任意一个地方创建tutorial目录。然后使用init命令把该tutorial目录移动到本地Git数据库。
+$ git init
+
+按照以下步骤把新创建的tutorial目录设置到Git数据库。
+$ mkdir tutorial
+$ cd tutorial
+$ git init
+Initialized empty Git repository in /Users/yourname/Desktop/tutorial/.git/
+
+请使用status命令确认工作树和索引的状态。
+$ git status
+
+将文件加入到索引，要使用add命令。在<file>指定加入索引的文件。用空格分割可以指定多个文件。
+$ git add <file>..
+
+指定参数「.」，可以把所有的文件加入到索引。
+$ git add .
+
+既然sample.txt已加入到索引，我们就可以提交文件了。请执行如下显示的commit命令。
+$ git commit -m ""
+
+使用log命令，我们可以在数据库的提交记录看到新的提交。
+$ git log
+
+请使用remote指令添加远程数据库。在<name>处输入远程数据库名称，在<url>处指定远程数据库的URL。
+$ git remote add <name> <url>
+
+使用push命令向数据库推送更改内容。<repository>处输入目标地址，<refspec>处指定推送的分支。我们将在高级篇详细地对分支进行说明。
+$ git push <repository> <refspec>...
