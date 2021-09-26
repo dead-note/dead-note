@@ -54,3 +54,5 @@ $ git clone git@github.com:dead-note/dead-note.git test2
 使用pull指令进行拉取操作。省略数据库名称的话，会在名为origin的数据库进行pull。
 $ git pull <repository> <refspec>...
 $ git pull origin master
+
+push冲突的解决2
