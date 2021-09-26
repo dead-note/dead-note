@@ -37,6 +37,8 @@ $ git commit -m ""
 
 使用log命令，我们可以在数据库的提交记录看到新的提交。
 $ git log
+我们可以用log命令来确认数据库的历史记录是否准确。指定--graph选项，能以文本形式显示更新记录的流程图。指定--oneline选项，能在一行中显示提交的信息。
+$ git log --graph --oneline
 
 请使用remote指令添加远程数据库。在<name>处输入远程数据库名称，在<url>处指定远程数据库的URL。
 $ git remote add <name> <url>
